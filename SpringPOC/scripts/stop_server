@@ -1,6 +1,11 @@
 #!/bin/bash
-isExistApp = `pgrep tomcat8`
+
+echo " Starting Stop Script"
+set -e
+
+isExistApp = `pgrep -f tomcat8`
 if [[ -n  $isExistApp ]]; then
     service tomcat8 stop        
 fi
 
+echo " End Stop Script"
