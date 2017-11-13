@@ -17,6 +17,7 @@ sed -i -e "s/To deploy with this revision, run://g" "$_cdir/createdeploy.sh"
 sed -i -e "s/<deployment-group-name>/SpringPOCDG/g" "$_cdir/createdeploy.sh"
 sed -i -e "s/<deployment-config-name>/CodeDeployDefault.OneAtATime/g" "$_cdir/createdeploy.sh"
 sed -i -e "s/<description>/Deployment --file-exists-behavior=OVERWRITE/g" "$_cdir/createdeploy.sh"
+cat createdeploy.sh
 chmod 755  createdeploy.sh
 ./createdeploy.sh
 ##rm "$_cdir"/createdeploy.sh
