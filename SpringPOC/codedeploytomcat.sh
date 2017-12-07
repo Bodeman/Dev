@@ -3,8 +3,8 @@
 # Author: CAMMIS
 # ---------------------------------------------------------------
 aws configure list
-aws configure set AWS_ACCESS_KEY_ID AKIAL7NDHY34EEWS7JGQ
-aws configure set AWS_SECRET_ACCESS_KEY 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
+aws configure set AWS_ACCESS_KEY_ID A
+aws configure set AWS_SECRET_ACCESS_KEY
 aws configure set default.region us-gov-west-1
 aws configure list
 aws deploy push --application-name SpringPOC --description "push to S3" --s3-location s3://codedeploybucket/SpringPOC.zip --source /var/lib/jenkins/workspace/SpringPOCTest/SpringPOC > createdeploy.sh
