@@ -32,7 +32,7 @@ public class LoginServiceImpl implements LoginService {
 		}
 		
 		logger.info("exit doLogin: res = [" + res + "]");
-		
+		// this is a test build comment.
 		return res;
 	}
 }
