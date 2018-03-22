@@ -36,7 +36,7 @@ public class LoginServiceTest {
 		Login login = new Login();
 		
 		String user = "a";
-		String pass = "CC";
+		String pass = "a";
 		
 		loginBean.setUsername(user);
 		loginBean.setPassword(pass);
@@ -44,7 +44,8 @@ public class LoginServiceTest {
 		login.setName(user);
 		login.setPassword(pass);
 		
-		when(loginDao.findByUsernameAndPassword(user, pass)).thenReturn(login);
+		// when(loginDao.findByUsernameAndPassword(user, pass)).thenReturn(login);
+		when(loginDao.findByUsernameAndPasswork(user, pass)).thenReturn(null);
 		
 		boolean res = loginService.doLogin(loginBean);
 		
