@@ -45,7 +45,7 @@ public class LoginServiceTest {
 		login.setPassword(pass);
 		
 		// when(loginDao.findByUsernameAndPassword(user, pass)).thenReturn(login);
-		when(loginDao.findByUsernameAndPasswork(user, pass)).thenReturn(null);
+		when(loginDao.findByUsernameAndPassword(user, pass)).thenReturn(null);
 		
 		boolean res = loginService.doLogin(loginBean);
 		
