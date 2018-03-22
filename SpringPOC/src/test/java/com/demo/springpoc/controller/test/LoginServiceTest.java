@@ -32,7 +32,7 @@ public class LoginServiceTest {
 	@Test
 	public void testDoLoginSuccess() {
 		
-		LoginBean loginBean = new LoginBean();
+		LoginBean loginBean = new LoginBean();     
 		Login login = new Login();
 		
 		String user = "a";
