@@ -36,7 +36,7 @@ public class LoginServiceTest {
 		Login login = new Login();
 		
 		String user = "a";
-		String pass = "ax";
+		String pass = "c";
 		
 		loginBean.setUsername(user);
 		loginBean.setPassword(pass);
