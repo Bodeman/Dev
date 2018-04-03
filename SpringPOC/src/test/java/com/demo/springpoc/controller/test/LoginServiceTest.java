@@ -42,7 +42,7 @@ public class LoginServiceTest {
 		loginBean.setPassword(pass);
 		login.setId(1);
 		login.setName(user);
-		login.setPassword(pass);
+		login.setPassword(pass);  //Test
 		
 		//when(loginDao.findByUsernameAndPassword(user, pass)).thenReturn(login);
 		when(loginDao.findByUsernameAndPassword(user, pass)).thenReturn(null);
