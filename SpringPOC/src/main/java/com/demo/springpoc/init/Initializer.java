@@ -1,4 +1,4 @@
-package com.demo.springpoc.init;
+package com.demo.springpoc.init;   // Simple comment
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
