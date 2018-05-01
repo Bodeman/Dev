@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	
+	<!--The identifier of the parent POM -->
+<parent>
+    <groupId>cammis.ca.gov</groupId>
+    <artifactId>ParentPOM</artifactId>
+    <version>1.0.0</version>
+</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.demo</groupId>
 	<artifactId>springpoc</artifactId>
@@ -20,6 +28,14 @@
 			<url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
 		</repository>		
 	</repositories>	
+	
+	
+	<scm> 
+		<connection>scm:git:https://github.com/rduart/XMLtoPDF.git</connection>    
+		<developerConnectionscm:git:https://github.com/rduart/XMLtoPDF/</developerConnection> 
+		<tag>HEAD</tag>
+ 	</scm>
+
 	
 	<dependencies>
 		<!-- Spring -->
