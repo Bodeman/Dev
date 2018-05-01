@@ -29,10 +29,10 @@
 		</repository>		
 	</repositories>	
 	
-	
+	  
 	<scm> 
-		<connection>scm:git:https://github.com/rduart/XMLtoPDF.git</connection>    
-		<developerConnectionscm:git:https://github.com/rduart/XMLtoPDF/</developerConnection> 
+		<connection>scm:git:https://github.com/CA-MMISDigitalServices/Dev.git</connection>    
+		<developerConnectionscm:git:https://github.com/CA-MMISDigitalServices/Dev.git</developerConnection> 
 		<tag>HEAD</tag>
  	</scm>
 
