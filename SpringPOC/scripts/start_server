@@ -7,10 +7,12 @@ set -e
 CATALINA_HOME='/var/lib/tomcat8'
 DEPLOY_TO_ROOT='true'
 #CONTEXT_PATH='##CONTEXT_PATH##'
-SERVER_HTTP_PORT='80'
+SERVER_HTTP_PORT='80'  
 
 TEMP_STAGING_DIR='/tmp/codedeploy-deployment-staging-area'
 WAR_STAGED_LOCATION="$TEMP_STAGING_DIR/springpoc-1.0.0-SNAPSHOT.war"
+x=$(find $TEMP_STAGING_DIR * -name "*.war")
+echo $x
 HTTP_PORT_CONFIG_XSL_LOCATION="$TEMP_STAGING_DIR/configure_http_port.xsl"
 
 # In Tomcat, ROOT.war maps to the server root
