@@ -10,7 +10,7 @@ DEPLOY_TO_ROOT='true'
 SERVER_HTTP_PORT='80'
 
 TEMP_STAGING_DIR='/tmp/codedeploy-deployment-staging-area'
-WAR_STAGED_LOCATION="$TEMP_STAGING_DIR/springpoc-1.0.0-BUILD-SNAPSHOT.war"
+WAR_STAGED_LOCATION="$TEMP_STAGING_DIR/springpoc-1.0.0-SNAPSHOT.war"
 
 x=$(find $TEMP_STAGING_DIR * -name "*.war")
 echo $x
