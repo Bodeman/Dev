@@ -221,6 +221,9 @@
 		</dependency>				
 	</dependencies>
     <build>
+	    
+	<finalName>cammis</finalName>
+
         <plugins>
             <plugin>
                 <artifactId>maven-eclipse-plugin</artifactId>
