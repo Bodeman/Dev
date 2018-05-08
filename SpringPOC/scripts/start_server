@@ -5,36 +5,14 @@ echo " Starting Start Script"
 set -e
 
 CATALINA_HOME='/var/lib/tomcat8'
-DEPLOY_TO_ROOT='true'
-#CONTEXT_PATH='##CONTEXT_PATH##'
 SERVER_HTTP_PORT='80'
 
-TEMP_STAGING_DIR='/tmp/codedeploy-deployment-staging-area'
-WAR_STAGED_LOCATION="$TEMP_STAGING_DIR/springpoc-1.0.0-BUILD-SNAPSHOT.war"
-HTTP_PORT_CONFIG_XSL_LOCATION="$TEMP_STAGING_DIR/configure_http_port.xsl"
+docker login -u $dockerhubUser -p $dockerhubPassword
 
-# In Tomcat, ROOT.war maps to the server root
-if [[ "$DEPLOY_TO_ROOT" = 'true' ]]; then
-    CONTEXT_PATH='cammis'
-fi
+docker push trinitytg/springpoc:latest
 
-# Remove unpacked application artifacts
-if [[ -f $CATALINA_HOME/webapps/$CONTEXT_PATH.war ]]; then
-    rm $CATALINA_HOME/webapps/$CONTEXT_PATH.war
-fi
-if [[ -d $CATALINA_HOME/webapps/$CONTEXT_PATH ]]; then
-    rm -rfv $CATALINA_HOME/webapps/$CONTEXT_PATH
-fi
+docker run -d -it --rm -p 8888:8080 trinitytg/springpoc
 
-# Copy the WAR file to the webapps directory
-echo " Copy war "
-cp $WAR_STAGED_LOCATION $CATALINA_HOME/webapps/$CONTEXT_PATH.war
-
-# Configure the Tomcat server HTTP connector
-#{ which xsltproc; } || { yum install xsltproc; } || { apt-get install xsltproc; }
-#cp $CATALINA_HOME/conf/server.xml $CATALINA_HOME/conf/server.xml.bak
-#xsltproc $HTTP_PORT_CONFIG_XSL_LOCATION $CATALINA_HOME/conf/server.xml.bak > $CATALINA_HOME/conf/server.xml
-
-service tomcat8 start
+docker logout
 
 echo " End Start Script"
