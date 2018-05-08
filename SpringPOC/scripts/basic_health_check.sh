@@ -8,10 +8,10 @@ done< <(LANG=C /sbin/ifconfig)
 echo $myip
 
 echo " Start Health Check Script"
-
+  
 for i in `seq 1 10`;
 do
-  HTTP_CODE=`curl --write-out '%{http_code}' -o /dev/null -m 10 -q -s http://$myip:8080/cammis`
+  HTTP_CODE=`curl --write-out '%{http_code}' -o /dev/null -m 10 -q -s http://$myip:8888/springpoc`
   if [ "$HTTP_CODE" == "302" ]; then
     echo "Successfully pulled root page."
     exit 0;
