@@ -3,6 +3,6 @@
 echo " Starting Stop Script"
 set -e   
 
-service tomcat8 stop        
+docker stop $(docker ps -aq)
 
 echo " End Stop Script"
